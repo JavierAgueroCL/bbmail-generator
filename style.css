@@ -1,0 +1,6 @@
+.im-centered { margin: auto; }
+.clippy { position: absolute; right: 6px; top: 6px; padding: 3px 8px; }
+.clippy img { width: 18px; }
+.relative { position: relative; }
+.content-block {display: none;}
+.info-corner { border: 1px solid #eee;border-radius: 6px;padding: 4px 11px; }

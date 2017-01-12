@@ -8,16 +8,288 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>BigBuda Mail Generator</title>
 </head>
+
 <body>
-   <h1 class="text-center">Email Generator</h1>
-   <div class="row center-block">
-     <div class="col-md-4">.col-md-4</div>
-     <div class="col-md-4">.col-md-4</div>
-     <div class="col-md-4">.col-md-4</div>
-   </div>
+    <h1 class="text-center titulo">Bigbuda Email Generator</h1>
+    <hr width="100%">
+    <div class="row center-block">
+        <div class="col-md-4 text-center"><button type="button" class="btn btn-danger dev_start_btn">1 - Inicio desarrollo</button></div>
+        <div class="col-md-4 text-center"><button type="button" class="btn btn-primary dev_demo_btn">2 - Envío de enlace DEMO</button></div>
+        <div class="col-md-4 text-center"><button type="button" class="btn btn-info dev_end_btn">3. Mail de entrega final</button></div>
+    </div>
+    <hr width="100%">
+    <div class="row center-block dev_start content-block">
+        <div class="col-md-2 text-center"></div>
+        <div class="col-md-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Nombre Desarrollador</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control devname1" placeholder="Nombre Desarrollador">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-4 control-label">Nombre Cliente</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                    </div>
+                </div>
+            </form>
+            <hr width=100%>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Inicio desarrollo <span class="clientname1_in">CLIENTE</span> / Agencia Bigbuda</div>
+                <div class="panel-body relative">
+                    <p id="mailtext_1">
+                        Estimados:
+                        <br><br>Junto con saludar, me presento, mi nombre es <span class="devname1_in">XXX</span> y soy el programador encargado de su proyecto. Puesto que ya terminó la etapa de diseño (se aprobó el diseño final), comenzaremos con la
+                        programación de su sitio web.
+                        <br><br>Una vez que tengamos el sitio completamente programado y haya quedado exactamente igual al <mark>diseño que usted aprobó</mark> en la etapa anterior, le enviaremos el enlace para que lo pueda revisar.
+                        <br><br>Si luego, desea cambiar contenido (texto, imágenes), lo podrá hacer desde el administrador del sitio web, puesto que al finalizar le enviaremos un video tutorial con los accesos al administrador para poder realizar cambios.
+                        <br><br>Quedo atento a cualquier pregunta o comentario.
+                    </p>
+                    <button class="btn clippy" data-clipboard-target="#mailtext_1">
+                         <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard">
+                     </button>
+                </div>
+
+            </div>
+            <div class="col-md-2 text-center"></div>
+        </div>
+    </div>
+    <div class="row center-block dev_demo content-block">
+        <div class="col-md-2 text-center"></div>
+        <div class="col-md-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">URL Desarrollo</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">http://developers.bigbuda.cl/</span>
+                            <input type="text" class="form-control devurl" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-4 control-label">Nombre Cliente</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                    </div>
+                </div>
+            </form>
+            <hr width=100%>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Revisión sitio web <span class="clientname1_in">CLIENTE</span> / Agencia Bigbuda</div>
+                <div class="panel-body relative">
+                    <p id="mailtext_2">
+                        Estimados:
+                        <br><br> Junto con saludar, les comento que se ha terminado la etapa de programación, necesitamos que por favor revisen detenidamente que el sitio haya quedado tal cual al diseño que aprobaron en la etapa de diseño.
+                        <br><br> En caso que tengan comentarios, por favor enviarlos en un solo correo, para no perder alguna de las correcciones (como puede suceder cuando los clientes nos envían muchos correos con distintas correcciones).
+                        <br><br> URL: <span class="devurl_in">http://</span> (en estos momentos se encuentra en un servidor de prueba)
+                        <br><br> <mark>NOTA:</mark><small> Les recuerdo que si requieren cambiar/agregar/eliminar contenido (imágenes o textos), lo podrán hacer ustedes desde el administrador una vez entregado el sitio web, puesto que durante las primeras etapas del proyecto (entrega
+                        de información y diseño) se debe entregar toda la información y contenido (imágenes, textos).</small>
+                        <br><br> Quedo atento a cualquier pregunta o comentario
+                    </p>
+                    <button class="btn clippy" data-clipboard-target="#mailtext_2">
+                        <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard">
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-md-2 text-center"></div>
+        </div>
+    </div>
+    <div class="row center-block dev_end content-block">
+        <div class="col-md-1 text-center"></div>
+        <div class="col-md-10">
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><i class="fa fa-smile-o" aria-hidden="true"></i> INFORMACIÓN CLIENTE</div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <h4 class="text-center row"></h4>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon3">http://developers.bigbuda.cl/</span>
+                                            <input type="text" class="form-control devurl" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-3 control-label" style="padding-left: 0px">Nombre Cliente</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><i class="fa fa-line-chart" aria-hidden="true"></i> GOOGLE ANALYTICS</div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <h4 class="text-center row"></h4>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon3">http://developers.bigbuda.cl/</span>
+                                            <input type="text" class="form-control devurl" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-3 control-label" style="padding-left: 0px">Nombre Cliente</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><i class="fa fa-wordpress" aria-hidden="true"></i> ACCESOS A WORDPRESS</div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <h4 class="text-center row"></h4>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon3">http://developers.bigbuda.cl/</span>
+                                            <input type="text" class="form-control devurl" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-3 control-label" style="padding-left: 0px">Nombre Cliente</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><i class="fa fa-download" aria-hidden="true"></i> DESCARGAS</div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <h4 class="text-center row"></h4>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon3">http://developers.bigbuda.cl/</span>
+                                            <input type="text" class="form-control devurl" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-3 control-label" style="padding-left: 0px">Nombre Cliente</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control clientname1" placeholder="Nombre Cliente">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr width=100%>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Entrega sitio web <span class="clientname1_in">CLIENTE</span> / Agencia Bigbuda</div>
+                <div class="panel-body relative">
+                    <span id="mailtext_3">
+                       <h1 style="width: 100%; margin:0 auto; padding: 0; text-align: center; display: block; font-size: 22px; background: #ef0000; color: #fff; padding: 8px">POR FAVOR GUARDAR ESTE CORREO EN UN LUGAR SEGURO</h1>
+                        <br><br> Estimados:
+                        <br><br> Junto con saludar, adjuntamos los datos acceso para: <span class="devurl_in">http://</span> (actualmente esta en <span class="devurl_in">http://</span> hasta que ustedes nos den el VB para subir al
+                    sitio principal).
+                    <hr width=100%>
+                    <h1>1. <small>ACCESO ADMINISTRADOR SITIO WEB:</small></h1> Les recomendamos utilizar Google Chrome para modificar el sitio web.
+                    <br><br>
+                    <table class="table">
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>URL de Acceso</th>
+                        <tr>
+                            <td>XXX</td>
+                            <td>WE98FH·$%</td>
+                            <td>http://www.XXX.cl/admin</td>
+                        </tr>
+                    </table>
+                    <hr width=100%>
+
+                    <h1>2. <small>DESCARGA VIDEOTUTORIAL DE ADMINISTRACIÓN:</small></h1>
+                    <br> > DESCARGAR: http://www.XXX.cl
+                    <br><br>
+                    <mark>NOTA:</mark><small> Por favor vean el video tutorial completo y detenidamente antes de realizar cualquier cambio, recuerden que si no están seguros de algo es recomendable que pregunten (via mail o teléfono), ya que actualmente el sitio esta completo, terminado y 100% funcionando.
+                     Cualquier arreglo o daño a los archivos será cobrado por separado.</small>
+                    <br><br> En caso que les interese, tenemos disponible servicios de mantención web, donde nos hacemos cargo de mantener el sitio siempre actualizado, realizar cambios, mejoras, respaldos que ayudan a tener un sitio mas seguro y saludable.
+
+                    <hr width=100%>
+                    <h1>3. <small>ESTADÍSTICAS GOOGLE ANALYTICS</small></h1>
+                    <br><br>
+                    <table class="table">
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>URL de Acceso</th>
+                        <tr>
+                            <td>XXX</td>
+                            <td>WE98FH·$%</td>
+                            <td>http://www.XXX.cl/admin</td>
+                        </tr>
+                    </table>
+
+                    <hr width=100%>
+
+                    <h1>4. <small>DESCARGA RESPALDO SITIO + BASE DE DATOS:</small></h1>
+                    <br> > DESCARGA: http://www.XXX.cl
+
+
+                    <hr width=100%>
+
+                    <blockquote>
+                        <p>En nombre de todo el equipo de Bigbuda, le comento que fue un agrado para nosotros haber trabajado con ustedes y esperamos continuar trabajando en el tiempo para construir una excelente relación a largo plazo.</p>
+                    </blockquote>
+
+
+                    <em>Si tuvieron una buena experiencia trabajando con nosotros, les pedimos que nos recomienden con sus amigos y conocidos. En caso que alguno de ellos contrate nuestros servicios, les daremos descuentos especiales a ustedes y a sus referidos en nuevos servicios.</em>
+                    <br><br>Gracias y quedo atento a cualquier mensaje.
+                    </span>
+                    <button class="btn clippy" data-clipboard-target="#mailtext_3">
+                        <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard">
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-md-1 text-center"></div>
+        </div>
+    </div>
+
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"></script>
+<script src="main.js"></script>
+
 </html>
